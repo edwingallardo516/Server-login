@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="1029560581535-spbm1k7okv8ql6imk0u7pivirsohfuri.apps.googleusercontent.com">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>User Sing In</title>
+</head>
+
+<body>
+
+    <div class="global-container">
+        <div class="card login-form">
+        <div class="card-body">
+            <h3 class="card-title text-center">Server Login</h3>
+            <div class="card-text">
+    
+                <div id="messageError" role="alert"></div>
+                <form>
+
+                    <!-- to error: add class "has-danger" -->
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control form-control-sm" id="email" aria-describedby="emailHelp" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <a href="#" style="float:right;font-size:12px;">Forgot password?</a>
+                        <input type="password" class="form-control form-control-sm" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" onclick="postAuth()">Sign in</button>
+                    <hr>
+                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                    <span>
+                        <a href="#" onclick="signOut();">Sign out</a>
+                    </span>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="./helpers/signGoogle.js"></script>
+    <script src="./helpers/exportData.js"></script>
+</body>
+</html>
