@@ -37,3 +37,8 @@ async function postAuth() {
     .catch(console.log) 
 }
 
+async function signOutUser() {
+    console.log('entra')
+    location.href = '../index.html'
+}
+
